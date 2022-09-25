@@ -6,6 +6,7 @@ node('master')
 	}
     stage('Continuous Build') 
 	{
+    input 'waiting for tester approval'		
     sh label: '', script: 'mvn package'
 	}
 }
